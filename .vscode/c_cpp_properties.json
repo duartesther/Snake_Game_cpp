@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "name": "Win64-MinGW",
+      "intelliSenseMode": "windows-gcc-x64",
+      "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "includePath": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/src/private",
+        "C:/msys64/mingw64/include"  // Allegro headers
+      ],
+      "defines": [
+        "ALLEGRO_STATICLINK"  // opcional, se estiver linkando estatico
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}/src",
+          "${workspaceFolder}/include",
+          "${workspaceFolder}/src/private",
+          "C:/msys64/mingw64/include"
+        ],
+        "limitSymbolsToIncludedHeaders": false
+      }
+    }
+  ],
+  "version": 4
+}
