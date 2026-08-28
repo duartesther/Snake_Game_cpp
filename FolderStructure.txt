@@ -1,0 +1,66 @@
+================= Estrutura resumida ================= 
+
+SnakeGame/
+├── 📁 include/                 # Headers públicos (interface da API)
+│   └── SnakeGame/
+│       ├── Game.hpp
+│       ├── Entity.hpp
+│       ├── Vector2D.hpp
+│       ├── Types.hpp
+│       └── ...
+├── 📁 src/                    # Implementações privadas
+│   ├── Game.cpp
+│   ├── Snake.cpp
+│   ├── Apple.cpp
+│   ├── Field.cpp
+│   ├── ConsoleHUD.cpp
+│   ├── Sound.cpp
+│   └── private/              
+│       ├── ResourceManager.hpp
+│       ├── AllegroLoaders.hpp
+│       └── AllegroGfx.hpp
+├── 📁 assets/                # Recursos do jogo
+│   ├── Images/
+│   ├── Fonts/
+│   └── Sounds/
+├── 📁 docs/                  # Documentação
+│   ├── architecture.md
+│   ├── building.md
+│   └── design_decisions.md
+├── 📁 scripts/               # Scripts de build/utilitários
+│   ├── build.sh
+│   ├── build.bat
+│   └── deploy.ps1
+├── 📄 CMakeLists.txt
+├── 📄 README.md              
+|__ 📄 LICENSE
+
+================= Estrutura de Diretórios ================= 
+
+include/SnakeGame/    # Headers públicos
+├── Game.hpp          # Classe principal
+├── Entity.hpp        # Base para entidades
+├── Vector2D.hpp      # Matemática 2D
+├── Types.hpp         # Configurações e tipos
+├── Apple.hpp         # Maçã coletável
+├── Field.hpp         # Campo de jogo
+├── Snake.hpp         # Cobra jogável
+├── ConsoleHUD.hpp    # Interface
+└── Sound.hpp         # Sistema de áudio
+
+src/                  # Implementações
+├── Game.cpp          # Loop principal
+├── Snake.cpp         # Movimento e colisão
+├── Apple.cpp         # Spawning de comida
+├── Field.cpp         # Renderização do campo
+├── ConsoleHUD.cpp    # HUD e placar
+├── Sound.cpp         # Efeitos e música
+├── main.cpp             # main principal
+├── main_text_linux.cpp  # Ponto de entrada linux versão texto
+├── main_no_audio.cpp    # Ponto de entrada para versão executável sem áudio
+└── main_text.cpp        # Versão terminal windows
+
+src/private
+├── ResourceManager.hpp        
+├── AllegroLoaders.hpp       
+└── AllegroGfx.hpp            

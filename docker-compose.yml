@@ -1,0 +1,27 @@
+services:
+  snake-game:
+    build: .
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+    working_dir: /app
+    command: ./build/bin/SnakeGame
+
+  snake-text:
+    build: .
+    working_dir: /app
+    command: ./build/bin/SnakeText
+    tty: true
+    stdin_open: true
+
+  # VERSÃO GRÁFICA SEM ÁUDIO (OPCIONAL)
+  snake-game-no-audio:
+    build: .
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ALLEGRO_MEMORY_DEBUG=1
+    working_dir: /app
+    command: ./build/bin/SnakeGame
